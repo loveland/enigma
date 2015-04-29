@@ -49,12 +49,12 @@ module Enigma
       tmp
     end
 
-    def unzip_zip
-      tmp = write_tmp
-      Zip::File.open(tmp.path) do |zipfile|
-        zipfile.first.get_input_stream.read
-      end
-    end
+    #def unzip_zip
+    #  tmp = write_tmp
+    #  Zip::File.open(tmp.path) do |zipfile|
+    #    zipfile.first.get_input_stream.read
+    #  end
+    #end
 
     def unzip_gz
       tmp = write_tmp
@@ -71,7 +71,7 @@ module Enigma
           if download_url =~ /\.gz/
             unzip_gz
           else
-            unzip_zip
+            #unzip_zip
           end
         end
     end

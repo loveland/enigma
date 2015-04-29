@@ -9,7 +9,7 @@ require 'typhoeus'
 require 'net/https'
 require 'uri'
 require 'json'
-require 'zip'
+#require 'zip'
 require 'csv'
 
 # Library
