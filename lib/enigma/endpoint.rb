@@ -101,7 +101,8 @@ module Enigma
 
     def request
       Enigma.logger.info "Making request to #{url}"
-      req = Typhoeus::Request.new(url, method: :get, params: params).run
+      req = Typhoeus::Request.new(url, method: :get, params: params, ssl_verifypeer:false).run
+      Rails.logger.ap req
       Response.parse(req)
     end
   end
